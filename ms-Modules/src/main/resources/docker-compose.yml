@@ -1,0 +1,51 @@
+version: "3"
+services:
+  mongodb-conteneur:
+    image: mongo:latest
+    container_name: "mongodb-conteneur"
+    ports:
+      - 27017:27017
+  eureka-discovery-conteneur:
+    image: eureka-discovery-image
+    container_name: "eureka-discovery-conteneur"
+    ports:
+      - 8761:8761
+  gateway-service-conteneur:
+    image: gateway-service-image:2.0
+    container_name: "gateway-service-conteneur"
+    ports:
+      - 8888:8888
+    links:
+      - eureka-discovery-conteneur
+    environment:
+      EUREKA_INSTANCE_HOSTNAME: gateway-service-conteneur
+  keycloak-conteneur:
+    image: jboss/keycloak:latest
+    container_name: "keycloak-conteneur"
+    ports:
+      - 8080:8080
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+  ms-deploiements-conteneur:
+    image: ms-deploiement-image:4.0
+    container_name: "ms-deploiements-conteneur"
+    ports:
+      - 8081:8081
+    links:
+      - mongodb-conteneur
+      - eureka-discovery-conteneur
+      - keycloak-conteneur
+      - gateway-service-conteneur
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-discovery-conteneur:8761/eureka
+      EUREKA_INSTANCE_HOSTNAME: ms-deploiements-conteneur
+  ms-frontend-conteneur:
+    image: ms-frontend-image:7.0
+    container_name: "ms-frontend-conteneur"
+    ports:
+      - 4200:80
+    links:
+      - ms-deploiements-conteneur
+
+

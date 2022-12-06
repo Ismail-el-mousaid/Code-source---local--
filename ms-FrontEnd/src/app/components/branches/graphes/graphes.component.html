@@ -1,0 +1,24 @@
+
+<div *ngIf="chartData">
+  <google-chart
+    [title]="chartData.title"
+    [type]="chartData.type"
+    [data]="chartData.data"
+    [columns]="chartData.columnNames"
+    [options]="chartData.options"
+    [width]="chartData.width"
+    [height]="chartData.height">
+  </google-chart>
+</div>
+
+<div *ngIf="chartDataBar">
+  <google-chart
+    [title]="chartDataBar.title"
+    [type]="chartDataBar.type"
+    [data]="chartDataBar.data"
+    [columns]="chartDataBar.columnNames"
+    [options]="chartDataBar.options"
+    [width]="chartDataBar.width"
+    [height]="chartDataBar.height">
+  </google-chart>
+</div>

@@ -1,0 +1,192 @@
+
+.btn-c {
+  font-size: 1em;
+  padding: 5px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  color: #000000;
+}
+
+.btn-c:hover {
+  background: #06D85F;
+  color: white;
+}
+
+.btn-plus {
+  background-color: blue;
+}
+
+.btn-plus:hover {
+  background: rgba(13, 42, 210, 0.83);
+}
+
+.police-1 {
+  font-family: cursive;
+}
+
+.police-2 {
+  font-family: system-ui;
+}
+
+.police-3 {
+  font-family: Trebuchet MS, sans-serif;
+}
+
+.police-4 {
+  font-family: "Apple Color Emoji";
+}
+
+.overlay {
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  transition: opacity 500ms;
+  /* visibility: hidden;
+   opacity: 0;  */
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  /*transition: all 5s ease-in-out;*/
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  /*transition: all 200ms;*/
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: #06D85F;
+  cursor: pointer;
+
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    width: 70%;
+  }
+
+  .popup {
+    width: 70%;
+  }
+}
+
+.bkgrnd {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.bgs {
+  background-color: #080342 !important;
+  color: #fff !important;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+
+/*** Hero Header ***/
+.hero-header {
+  margin-bottom: 6rem;
+  padding: 8rem 0 0 0;
+  background: url("src/assets/images/img/bg-circle.png"),
+  url("src/assets/images/img/bg-triangle.png"),
+  url("src/assets/images/img/bg-bottom.png"),
+  linear-gradient(to bottom right, #007BFFFF 0%, #007BFFFF 0%, #6C757DFF 100%, var(--primary), var(--secondary));
+  background-position: left 0px top 0px,
+  right 0px top 50%,
+  center bottom;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 991.98px) {
+  .hero-header {
+    padding: 6rem 0 9rem 0;
+  }
+}
+
+.txt {
+  margin-left: 2%;
+}
+
+.lblDate {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+.inpDate, .lblDate {
+  margin: .4rem 0;
+}
+
+.wdth {
+  width: 200px;
+}
+

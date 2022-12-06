@@ -1,0 +1,81 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  background: #eee;
+  color: deepskyblue;
+}
+
+.login-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.login-form {
+  max-width: 100%;
+  width: 370px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-control {
+  font-size: 15px;
+  min-height: 48px;
+  font-weight: 500;
+}
+
+.form-control:focus {
+  border-color: blue;
+  box-shadow: 0 0 0 0.2rem rgba(38, 173, 227, 0.25);
+}
+
+.forgot-link {
+  font-size: 13px;
+}
+
+.forgot-link label {
+  margin-bottom: 0;
+}
+
+.login-form a {
+  text-decoration: none;
+  color: #666;
+}
+
+.login-form a:hover {
+  color: blue;
+}
+
+.btn-custom {
+  background: blue;
+  border-color: blue;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  min-height: 48px;
+}
+
+.btn-custom:focus,
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom:active:focus {
+  background: #0871e7;
+  border-color: #0871e7;
+  color: #fff;
+}
+
+.btn-custom:focus {
+  box-shadow: 0 0 0 0.2rem rgba(114, 61, 190, .25);
+}
+
+.icon-password {
+  float: right;
+  margin-right: 15px;
+  margin-top: -35px;
+  position: relative;
+  z-index: 2;
+}
+
+.icon-password:hover {
+  cursor: pointer;
+  color: rgba(102, 102, 102, 0.76);
+}

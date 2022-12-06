@@ -1,0 +1,56 @@
+
+<div class="container mt-3" *ngIf="getTags">
+  <form class="example-form">
+    <mat-form-field appearance="legacy">
+      <input matInput placeholder="Find a Tag..." value="" (keyup)="applyFilter($event)" #inputVersion>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-error *ngIf="version.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </form>
+
+  <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"
+         class="mat-elevation-z8 mt-1">
+    <ng-container matColumnDef="module">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="module" sortActionDescription="Sort by module"> Module</th>
+      <td mat-cell *matCellDef="let element"> {{element.nameModule}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="branche">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="branche" sortActionDescription="Sort by branche"> Branche
+      </th>
+      <td mat-cell *matCellDef="let element"> {{element.nameBranche}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nameTag">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by nameTag"> Name Tag</th>
+      <td mat-cell *matCellDef="let element"> {{element.id }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateCreation">
+      <th mat-header-cell *matHeaderCellDef> Date Création </th>
+      <td mat-cell *matCellDef="let element"> {{element.dateCreation}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="message">
+      <th mat-header-cell *matHeaderCellDef> Message</th>
+      <td mat-cell *matCellDef="let element"> {{element.message}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="releaseNote">
+      <th mat-header-cell *matHeaderCellDef> Release Note</th>
+      <td mat-cell *matCellDef="let element"> {{element.releaseNote}} </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSize]="3" [pageSizeOptions]="[3, 6]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+
+</div>
+

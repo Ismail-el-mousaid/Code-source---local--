@@ -1,0 +1,119 @@
+.carousel-control-next {
+  right: -29px !important;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  width: auto;
+}
+
+.carousel-control-prev {
+  left: -29px !important;
+}
+
+.carousel-indicators {
+  margin: -50px;
+}
+
+.img {
+  height: 146px;
+}
+
+
+.navbar {
+  background: linear-gradient(to bottom right, #14c5ec, blue);
+  background-position: left 0px top 0px,
+  right 0px top 50%,
+  center bottom;
+  background-repeat: no-repeat;
+}
+
+/* navbar fix */
+.navbar .navbar-nav .nav-item .nav-link::before {
+  position: absolute;
+  /*content: "";*/
+  width: 0;
+  height: 0;
+  top: -10px;
+  left: -285%;
+  transform: translateX(-50%);
+  border: 10px solid;
+  border-color: var(--light) transparent transparent transparent;
+  transition: .5s;
+}
+
+
+/*** Footer ***/
+.footer {
+  margin-top: 6rem;
+  padding-top: 9rem;
+  background: url("src/assets/images/img/bg-circle.png"),
+  url("src/assets/images/img/bg-triangle.png"),
+  url("src/assets/images/img/bg-top.png"),
+  linear-gradient(to bottom right, #007BFFFF 0%, #007BFFFF 0%, #6C757DFF 100%, var(--primary), var(--secondary));
+  background-position: left 0px bottom 0px,
+  right 0px top 50%,
+  center top;
+  background-repeat: no-repeat;
+}
+
+.footer .btn.btn-social {
+  margin-right: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  border: 1px solid rgba(256, 256, 256, .1);
+  border-radius: 40px;
+  transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+  color: var(--primary);
+}
+
+.footer .btn.btn-link {
+  display: block;
+  margin-bottom: 10px;
+  padding: 0;
+  text-align: left;
+  color: var(--light);
+  font-weight: normal;
+  transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+  position: relative;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+
+.footer .copyright {
+  padding: 25px 0;
+  font-size: 14px;
+  border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+  color: var(--light);
+}
+
+.footer .footer-menu a {
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu a:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
